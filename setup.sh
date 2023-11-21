@@ -6,8 +6,10 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
-# Ask for the non-root username
-read -p "Enter the non-root username: " username
+# Automatically determine the username of the user who initiated the sudo command
+username=$(logname)
+
+echo "Running script for user: $username"
 
 # Enable and start essential services
 systemctl enable NetworkManager
