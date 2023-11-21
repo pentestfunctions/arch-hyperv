@@ -20,6 +20,9 @@ fi
 
 echo "Running script for user: $username"
 
+# Install essential packages
+pacman -Sy --noconfirm networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol
+
 # Enable and start essential services
 systemctl enable NetworkManager
 systemctl enable lightdm.service --force
