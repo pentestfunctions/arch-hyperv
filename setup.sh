@@ -6,8 +6,17 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
-# Automatically determine the username of the user who initiated the sudo command
-username=$(logname)
+# Find user directories in /home, excluding 'root' and 'lost+found'
+readarray -t users < <(find /home -maxdepth 1 -mindepth 1 -type d -not -name 'root' -not -name 'lost+found' -exec basename {} \;)
+
+# Check if only one user is found
+if [ "${#users[@]}" -eq 1 ]; then
+    username="${users[0]}"
+    echo "Running script for user: $username"
+else
+    echo "Multiple or no user directories found in /home. Please specify the username:"
+    read -r username
+fi
 
 echo "Running script for user: $username"
 
