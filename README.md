@@ -47,6 +47,7 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 ```bash
 su - robot
 cd /tmp
+sudo pacman -S git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
