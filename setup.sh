@@ -14,7 +14,7 @@ systemctl enable NetworkManager
 systemctl enable lightdm.service --force
 
 # Install packages
-pacman -Sy --noconfirm netcat vscode openvpn neofetch konsole bind
+pacman -Sy --noconfirm netcat code openvpn neofetch konsole bind
 
 # Configure konsole for the user
 su - "$username" -c 'curl https://raw.githubusercontent.com/pentestfunctions/konsole-quickcommands/main/konsolequickcommandsconfig > ~/.config/konsolequickcommandsconfig'
@@ -22,16 +22,15 @@ su - "$username" -c 'curl https://raw.githubusercontent.com/pentestfunctions/kon
 # Change ownership of a vscode directory
 sudo chown -R "$username" /usr/lib/code/out/vs/workbench
 
-# Install AUR helpers and packages
+# Install yay (AUR helper)
 cd /tmp
-git clone https://aur.archlinux.org/package-query.git
-cd package-query
-makepkg -sri
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 cd ..
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt
-makepkg -sri
-yaourt -S --noconfirm xts-windows10-theme xfce4-theme-switcher wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan
+
+# Install AUR packages with yay
+sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan
 
 # Additional configuration
 sudo cp /usr/bin/httpx-toolkit /usr/bin/httpx
