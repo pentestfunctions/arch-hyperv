@@ -51,6 +51,10 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
   - After installing it will ask you if you wish to `chroot into the newly created installation`
   - Select "yes (default)"
 
+<p align="center">
+  <img src="./static/install.gif">
+</p>
+
 <img src="https://i.imgur.com/6tu60vO.gif" width= "300000" alt="horizontal super thin rainbow RGB line">
 
 ### Post-Installation Setup 🛠️
@@ -65,6 +69,9 @@ curl https://raw.githubusercontent.com/pentestfunctions/arch-hyperv/main/setup.s
 chmod +x setup.sh
 sudo ./setup.sh
 ```
+<p align="center">
+  <img src="./static/postinstall.gif">
+</p>
 
 ### Contributing 🤝
 Feel free to contribute through the GitHub repository.
