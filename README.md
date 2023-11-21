@@ -11,9 +11,10 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 ### Step 1: Create Network Adapter
 - Configure a virtual network adapter in Hyper-V Manager.
 
-### Step 2: Add ISO to Hyper-V
+### Step 2: Add ISO to Hyper-V & Storage
 - Attach the Arch Linux ISO to your Hyper-V virtual machine.
-
+- Create vhdx storage to install Arch to
+  
 ### Step 3: Begin Installation with `archinstall`
 - Launch the Arch Linux installation and select "Msft Virtual Disk" for the disk layout.
 - Opt for a separate `/home` partition.
