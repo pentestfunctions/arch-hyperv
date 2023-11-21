@@ -46,6 +46,10 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 ### Post-Installation Setup 🛠️
 ```bash
 su - robot
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 curl https://raw.githubusercontent.com/pentestfunctions/arch-hyperv/main/setup.sh >> setup.sh
 chmod +x setup.sh
 sudo ./setup.sh
