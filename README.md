@@ -35,7 +35,7 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 5. Navigate to "Additional packages"
 - Type in the following:
   ```bash
-   networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol
+  networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol
   ```
 6. Select Install
 
