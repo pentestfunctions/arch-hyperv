@@ -74,6 +74,17 @@ sudo ./setup.sh
   <img src="./static/postinstall.gif">
 </p>
 
+#### Extra notes:
+1. Click the start menu icon and search `display` and configure a 16:9 resolution (*preferably 1920x1080)
+2. Right now the konsolequickcommands isn't being configured correctly so after rebooting please run:
+  ```bash
+   curl https://raw.githubusercontent.com/pentestfunctions/konsole-quickcommands/main/konsolequickcommandsconfig > ~/.config/konsolequickcommandsconfig
+  ```
+- This will properly configure the konsolequickcommands plugin for 'konsole' and will give you access to the fun commands I have set.
+- You will also need to change konsole to use "zsh" yourself by going into the Menu and selecting "Settings - Configure Konsole" then click New Profile. From here you can change the command to `/usr/bin/zsh`
+- You will also want to click on the appearance tab and change the font to `Source Code Pro Light`
+
+
 ### Contributing 🤝
 Feel free to contribute through the GitHub repository.
 
