@@ -58,8 +58,9 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 <img src="https://i.imgur.com/6tu60vO.gif" width= "300000" alt="horizontal super thin rainbow RGB line">
 
 ### Post-Installation Setup 🛠️
+Make sure you replace "robot" with the username you set during the installation procedure.
 ```bash
-su - robot
+su - robot 
 cd /tmp
 sudo pacman -S git
 git clone https://aur.archlinux.org/yay.git
