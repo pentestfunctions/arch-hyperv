@@ -41,4 +41,6 @@ mkdir -p "/home/$username/Downloads"
 wget https://github.com/pentestfunctions/arch-hyperv/blob/main/wallpaper.jpg?raw=true -O "/home/$username/Downloads/wallpaper.jpg"
 cp "/home/$username/Downloads/wallpaper.jpg" "/home/$username/.face"
 
+xfce4-theme-switcher -t Windows-10-db.tar.gz
+
 echo "Setup complete!"
