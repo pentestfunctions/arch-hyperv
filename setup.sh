@@ -43,6 +43,28 @@ mkdir -p "/home/$username/Downloads"
 wget https://github.com/pentestfunctions/arch-hyperv/blob/main/wallpaper.jpg?raw=true -O "/home/$username/Downloads/wallpaper.jpg"
 cp "/home/$username/Downloads/wallpaper.jpg" "/home/$username/.face"
 
-xfce4-theme-switcher -t Windows-10-db.tar.gz
+# Create the startup script in the user's home directory
+echo '#!/bin/bash' > "/home/$username/set_theme.sh"
+echo "xfce4-theme-switcher -t Windows-10-db.tar.gz" >> "/home/$username/set_theme.sh"
+chmod +x "/home/$username/set_theme.sh"
+
+# Create the .desktop file for autostart
+mkdir -p "/home/$username/.config/autostart"
+cat << EOF > "/home/$username/.config/autostart/set_theme.desktop"
+[Desktop Entry]
+Type=Application
+Exec=/home/$username/set_theme.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Set XFCE Theme
+Name=Set XFCE Theme
+Comment[en_US]=Automatically sets XFCE theme
+Comment=
+EOF
+
+# Correct ownership of the script and .desktop file
+chown "$username":"$username" "/home/$username/set_theme.sh"
+chown -R "$username":"$username" "/home/$username/.config/autostart"
 
 echo "Setup complete!"
