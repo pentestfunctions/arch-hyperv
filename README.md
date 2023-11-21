@@ -17,12 +17,23 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 
 ### Step 1: Create Network Adapter 🌐
   - Configure a virtual network adapter in Hyper-V Manager.
+    1. Open Hyper-V and select Virtual Switch Manager
+    2. Click New virtual network switch
+    3. Choose External + create new virtual switch (Give it a name)
+    4. Make sure your External network tag is set to your ethernet or wifi depending on which one is connected to internet on your host OS.
+    5. Enable `Allow management operating system to share this network adapter`
 
 <img src="https://i.imgur.com/6tu60vO.gif" width= "300000" alt="horizontal super thin rainbow RGB line">
 
 ### Step 2: Add ISO to Hyper-V & Storage 💾
+  - Download an image from here: https://archlinux.org/download/
   - Attach the Arch Linux ISO to your Hyper-V virtual machine.
-  - Create vhdx storage to install Arch to
+  - Create vhdx storage to install Arch to (dynamic preferably)
+  - Change the network adapter to the one we previously created
+  - Disable everything for now in the "Security tab"
+
+#### Extra: Open "Hyper-V Settings (different than your arch image)
+  - Disable enhanced session mode
 
 <img src="https://i.imgur.com/6tu60vO.gif" width= "300000" alt="horizontal super thin rainbow RGB line">
   
@@ -83,7 +94,7 @@ sudo ./setup.sh
 - This will properly configure the konsolequickcommands plugin for 'konsole' and will give you access to the fun commands I have set.
 - You will also need to change konsole to use "zsh" yourself by going into the Menu and selecting "Settings - Configure Konsole" then click New Profile. From here you can change the command to `/usr/bin/zsh`
 - You will also want to click on the appearance tab and change the font to `Source Code Pro Light`
-
+- Finally, apply the settings and then select your new profile from the list and choose "Set as Default"
 
 ### Contributing 🤝
 Feel free to contribute through the GitHub repository.
