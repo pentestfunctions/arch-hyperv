@@ -34,7 +34,7 @@ su - "$username" -c 'curl https://raw.githubusercontent.com/pentestfunctions/kon
 sudo chown -R "$username" /usr/lib/code/out/vs/workbench
 
 # Install AUR packages with yay
-sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher zsh wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan wfuzz
+sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher zsh wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan
 
 # Additional configuration
 sudo cp /usr/bin/httpx-toolkit /usr/bin/httpx
