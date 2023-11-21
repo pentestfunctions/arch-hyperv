@@ -33,13 +33,6 @@ su - "$username" -c 'curl https://raw.githubusercontent.com/pentestfunctions/kon
 # Change ownership of a vscode directory
 sudo chown -R "$username" /usr/lib/code/out/vs/workbench
 
-# Install yay (AUR helper)
-cd /tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-
 # Install AUR packages with yay
 sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan wfuzz
 
