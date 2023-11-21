@@ -16,14 +16,28 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 - Create vhdx storage to install Arch to
   
 ### Step 3: Begin Installation with `archinstall`
-- Launch the Arch Linux installation and select "Msft Virtual Disk" for the disk layout.
-- Opt for a separate `/home` partition.
-- Set a root password.
-- Create a user account and enable sudo.
-- Install essential packages:
+1. Navigate down to `Disk Configuration` and select "Use a best-effort default partition layout"
+- Select "Msft Virtual Disk"
+- Select "ext4"
+- Select "yes (default)" for a separate /home partition.
+
+2. Navigate to "Root password"
+- Enter a password for the root account
+  
+3. Navigate to "User account"
+- Select "Add a user"
+- Select "yes (default)" for superuser (sudo)
+- Select "Confirm and exit"
+
+4. Navigate to "Optional Repositories"
+- Select "multilib"
+
+5. Navigate to "Additional packages"
+- Type in the following:
   ```bash
-  pacstrap /mnt networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol zsh
+   networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol
   ```
+6. Select Install
 
 ###  Step 4: Finalize Installation
 - After installation, choose "Yes" to reboot.
