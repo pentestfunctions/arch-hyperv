@@ -40,6 +40,9 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 
 6. Select Install
 
+7. After installing it will ask you if you wish to `chroot into the newly created installation`
+   - Select "yes (default)"
+     
 ###  Step 4: Finalize Installation
 - After installation, choose "Yes" to reboot.
 
