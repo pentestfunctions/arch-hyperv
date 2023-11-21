@@ -31,7 +31,7 @@ systemctl enable lightdm.service --force
 pacman -Sy --noconfirm netcat code openvpn neofetch konsole bind
 
 # Configure konsole for the user
-su - "$username" -c 'curl https://raw.githubusercontent.com/pentestfunctions/konsole-quickcommands/main/konsolequickcommandsconfig > ~/.config/konsolequickcommandsconfig'
+su - "$username" -c "curl https://raw.githubusercontent.com/pentestfunctions/konsole-quickcommands/main/konsolequickcommandsconfig > /home/$username/.config/konsolequickcommandsconfig"
 
 # Change ownership of a vscode directory
 sudo chown -R "$username" /usr/lib/code/out/vs/workbench
