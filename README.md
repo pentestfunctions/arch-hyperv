@@ -9,34 +9,35 @@ Welcome to the Arch Linux Hyper-V Installation and Customization Guide! This REA
 ## Installation Steps 💻
 
 ### Step 1: Create Network Adapter
-- Configure a virtual network adapter in Hyper-V Manager.
+  - Configure a virtual network adapter in Hyper-V Manager.
 
 ### Step 2: Add ISO to Hyper-V & Storage
-- Attach the Arch Linux ISO to your Hyper-V virtual machine.
-- Create vhdx storage to install Arch to
+  - Attach the Arch Linux ISO to your Hyper-V virtual machine.
+  - Create vhdx storage to install Arch to
   
 ### Step 3: Begin Installation with `archinstall`
 1. Navigate down to `Disk Configuration` and select "Use a best-effort default partition layout"
-- Select "Msft Virtual Disk"
-- Select "ext4"
-- Select "yes (default)" for a separate /home partition.
+  - Select "Msft Virtual Disk"
+  - Select "ext4"
+  - Select "yes (default)" for a separate /home partition.
 
 2. Navigate to "Root password"
-- Enter a password for the root account
+  - Enter a password for the root account
   
 3. Navigate to "User account"
-- Select "Add a user"
-- Select "yes (default)" for superuser (sudo)
-- Select "Confirm and exit"
+  - Select "Add a user"
+  - Select "yes (default)" for superuser (sudo)
+  - Select "Confirm and exit"
 
 4. Navigate to "Optional Repositories"
-- Select "multilib"
+  - Select "multilib"
 
 5. Navigate to "Additional packages"
-- Type in the following:
-  ```bash
-  networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol
-  ```
+  - Type in the following:
+    ```bash
+    networkmanager nano xfce4 xfce4-goodies lightdm lightdm-gtk-greeter git konsole shellcheck zenity vivaldi vivaldi-ffmpeg-codecs wget nmap pavucontrol
+    ```
+
 6. Select Install
 
 ###  Step 4: Finalize Installation
