@@ -38,7 +38,6 @@ sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher 
 
 # Additional configuration
 sudo cp /usr/bin/httpx-toolkit /usr/bin/httpx
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mkdir -p "/home/$username/Downloads"
 wget https://github.com/pentestfunctions/arch-hyperv/blob/main/wallpaper.jpg?raw=true -O "/home/$username/Downloads/wallpaper.jpg"
 cp "/home/$username/Downloads/wallpaper.jpg" "/home/$username/.face"
@@ -66,5 +65,7 @@ EOF
 # Correct ownership of the script and .desktop file
 chown "$username":"$username" "/home/$username/set_theme.sh"
 chown -R "$username":"$username" "/home/$username/.config/autostart"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Setup complete!"
