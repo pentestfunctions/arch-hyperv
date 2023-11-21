@@ -32,7 +32,7 @@ makepkg -si
 cd ..
 
 # Install AUR packages with yay
-sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan
+sudo -u "$username" yay -S --noconfirm xts-windows10-theme xfce4-theme-switcher wafw00f whatweb burpsuite dirsearch httpx enum4linux nmap rustscan wfuzz
 
 # Additional configuration
 sudo cp /usr/bin/httpx-toolkit /usr/bin/httpx
